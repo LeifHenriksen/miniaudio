@@ -76621,6 +76621,8 @@ MA_API void ma_sound_set_stop_time_with_fade_in_pcm_frames(ma_sound* pSound, ma_
         }
 
         ma_sound_set_fade_start_in_pcm_frames(pSound, -1, 0, fadeLengthInFrames, stopAbsoluteGlobalTimeInFrames - fadeLengthInFrames);
+
+	return;
     }
 
     ma_node_set_state_time(pSound, ma_node_state_stopped, stopAbsoluteGlobalTimeInFrames);
